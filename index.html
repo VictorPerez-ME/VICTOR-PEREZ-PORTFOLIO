@@ -254,20 +254,17 @@
 
             <li class="timeline-item">
               <h4 class="h4 timeline-item-title">University of California, San Diego</h4>
-              <span>2022 — 2026</span>
+              <span>June 2026</span>
               <p class="timeline-text">
-                Bachelor of Science in Mechanical Engineering. Coursework in dynamics, controls, FEA,
-                thermodynamics, fluid mechanics, and mechatronics. Active in ASME and Engineers for a
-                Sustainable World (ESW).
+                Bachelor of Science in Mechanical Engineering.
               </p>
             </li>
 
             <li class="timeline-item">
               <h4 class="h4 timeline-item-title">Imperial Valley College</h4>
-              <span>2021 — 2023</span>
+              <span>June 2023</span>
               <p class="timeline-text">
-                Associate of Science in Mathematics &amp; Physics. Completed lower-division transfer preparation
-                with a focus on calculus, linear algebra, differential equations, and physics.
+                Associate of Science in Mathematics &amp; Physics.
               </p>
             </li>
 
@@ -435,87 +432,50 @@
           <h2 class="h2 article-title">Portfolio</h2>
         </header>
 
-        <section class="projects">
+        <!--
+          - PORTFOLIO GRID (default view)
+        -->
+
+        <section class="projects" data-portfolio-grid>
 
           <ul class="filter-list">
-
-            <li class="filter-item">
-              <button class="active" data-filter-btn>All</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>CAD Design</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Research</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Controls</button>
-            </li>
-
+            <li class="filter-item"><button class="active" data-filter-btn>All</button></li>
+            <li class="filter-item"><button data-filter-btn>CAD Design</button></li>
+            <li class="filter-item"><button data-filter-btn>Research</button></li>
+            <li class="filter-item"><button data-filter-btn>Controls</button></li>
           </ul>
 
           <div class="filter-select-box">
-
             <button class="filter-select" data-select>
               <div class="select-value" data-selecct-value>Select category</div>
-              <div class="select-icon">
-                <ion-icon name="chevron-down"></ion-icon>
-              </div>
+              <div class="select-icon"><ion-icon name="chevron-down"></ion-icon></div>
             </button>
-
             <ul class="select-list">
-
-              <li class="select-item">
-                <button data-select-item>All</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>CAD Design</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Research</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Controls</button>
-              </li>
-
+              <li class="select-item"><button data-select-item>All</button></li>
+              <li class="select-item"><button data-select-item>CAD Design</button></li>
+              <li class="select-item"><button data-select-item>Research</button></li>
+              <li class="select-item"><button data-select-item>Controls</button></li>
             </ul>
-
           </div>
 
           <ul class="project-list">
 
             <li class="project-item  active" data-filter-item data-category="controls">
-              <a href="#" data-project-trigger
-                 data-title="RFID-Based Automated Mouse Cognitive Training System"
-                 data-subtitle="Senior Capstone Project · Fall 2025 – Spring 2026"
-                 data-desc="Designed an RFID-enabled cognitive self-training system letting 4 group-housed mice access an automated training enclosure individually — cutting training timelines from 5–6 months to 10–15 days. Integrated three RFID reader modules with an ESP32 to actuate a dual-gate airlock, achieving a 10 cm read range, 100% detection success across all trials, and 400 ms tag-to-gate latency. Translated sponsor needs into measurable requirements covering single-mouse access control, 12-hour unattended operation, tool-free cleaning, and in-house replicability.">
+              <a href="#" data-project-open="rfid">
                 <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-                  <img src="./assets/images/project-1.jpg" alt="RFID Mouse Training System" loading="lazy">
+                  <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
+                  <img src="./assets/images/rfid-1.jpg" alt="RFID Mouse Training System" loading="lazy">
                 </figure>
                 <h3 class="project-title">RFID Mouse Training System</h3>
-                <p class="project-category">Controls</p>
+                <p class="project-category">Capstone · Controls</p>
               </a>
             </li>
 
             <li class="project-item  active" data-filter-item data-category="cad design">
-              <a href="#" data-project-trigger
-                 data-title="RC Plane Structures Sub-Lead"
-                 data-subtitle="ASME Student Design Project · Fall 2025 – Spring 2026"
-                 data-desc="Led structural design of a fixed-wing RC aircraft in Autodesk Fusion, designing structures around the flight controller, battery, and onboard particle sensor. Redesigned components to reduce weight by ~15% while maintaining structural reliability. Collaborated across structural, avionics, and software subteams to prototype and iterate, then completed flight testing and presented final design decisions at the ASME UCSD Industry Showcase.">
+              <a href="#" data-project-open="rcplane">
                 <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-                  <img src="./assets/images/proj-rcplane.jpg" alt="RC Plane CAD render" loading="lazy">
+                  <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
+                  <img src="./assets/images/rcplane-1.jpg" alt="RC Plane Structures" loading="lazy">
                 </figure>
                 <h3 class="project-title">RC Plane Structures</h3>
                 <p class="project-category">CAD Design</p>
@@ -523,15 +483,10 @@
             </li>
 
             <li class="project-item  active" data-filter-item data-category="cad design">
-              <a href="#" data-project-trigger
-                 data-title="Vertical Axis Wind Turbine — Project Co-Lead"
-                 data-subtitle="Engineers for a Sustainable World, UCSD · Spring 2025 – Spring 2026"
-                 data-desc="Co-led design of a compact vertical-axis wind turbine prototype demonstrating energy capture in space-constrained environments, integrating actuated blades, a generator belt system, and onboard energy storage for personal device charging. Researched and selected components for real-time monitoring — Hall effect sensor, INA226 power monitor, ESP32, and wind speed/direction sensors. Mentored students from various majors in CAD fundamentals using Autodesk Fusion.">
+              <a href="#" data-project-open="vawt">
                 <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-                  <img src="./assets/images/proj-vawt.jpg" alt="Vertical Axis Wind Turbine prototype" loading="lazy">
+                  <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
+                  <img src="./assets/images/vawt-1.jpg" alt="Vertical Axis Wind Turbine" loading="lazy">
                 </figure>
                 <h3 class="project-title">Vertical Axis Wind Turbine</h3>
                 <p class="project-category">CAD Design</p>
@@ -539,15 +494,10 @@
             </li>
 
             <li class="project-item  active" data-filter-item data-category="research">
-              <a href="#" data-project-trigger
-                 data-title="Automated CNT Sprayer for Electrode Coating"
-                 data-subtitle="NanoBioElectronics (NBE) Lab, UC San Diego · 2024 – Present"
-                 data-desc="Built an automated spray system for depositing carbon nanotubes onto gold electrodes with high precision and repeatability, integrating a solenoid-actuated spray gun, programmable time relay, laser alignment system, and a custom support frame over a heated plate. This eliminated inconsistencies in manual spraying and improved the reliability of electrochemical characterization. Also developed MATLAB scripts to automate data analysis and fabricated a jaw-motion device to validate salivary cortisol sensor readings.">
+              <a href="#" data-project-open="nbe">
                 <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-                  <img src="./assets/images/proj-nbe.jpg" alt="Automated CNT sprayer assembly" loading="lazy">
+                  <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
+                  <img src="./assets/images/nbe-1.jpg" alt="Automated CNT Sprayer" loading="lazy">
                 </figure>
                 <h3 class="project-title">NBE Lab — CNT Sprayer</h3>
                 <p class="project-category">Research</p>
@@ -555,15 +505,10 @@
             </li>
 
             <li class="project-item  active" data-filter-item data-category="cad design">
-              <a href="#" data-project-trigger
-                 data-title="Robot Design — MAE 3"
-                 data-subtitle="Class Design Project · Autodesk Fusion 360"
-                 data-desc="First full design-and-build project: a simple, reliable, resilient competition robot, fully designed and assembled in under five weeks in Fusion 360. Focused on structure, balance, and overall functionality, with each component individually designed, fabricated, and tested with close attention to dimensions, fits, and tolerances. Optimized performance for specific tasks across multiple design iterations.">
+              <a href="#" data-project-open="robot">
                 <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-                  <img src="./assets/images/proj-robot.jpg" alt="MAE 3 robot CAD render" loading="lazy">
+                  <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
+                  <img src="./assets/images/robot-1.jpg" alt="MAE 3 Robot Design" loading="lazy">
                 </figure>
                 <h3 class="project-title">MAE 3 Robot Design</h3>
                 <p class="project-category">CAD Design</p>
@@ -571,15 +516,10 @@
             </li>
 
             <li class="project-item  active" data-filter-item data-category="controls">
-              <a href="#" data-project-trigger
-                 data-title="2-DOF Rectilinear System Modeling &amp; PID Control"
-                 data-subtitle="Lab Class Project · Spring 2026"
-                 data-desc="Characterized a 2-DOF mass-spring-damper system by extracting dynamic parameters from experimental step responses and deriving a transfer function for simulation and control design. Performed sensitivity analysis under varying input amplitudes and mass configurations to evaluate PID controller robustness and identify performance limits. Processed and averaged multi-run data in MATLAB, generating figures comparing simulated vs. measured responses.">
+              <a href="#" data-project-open="pid">
                 <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-                  <img src="./assets/images/project-5.png" alt="PID Control Lab" loading="lazy">
+                  <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
+                  <img src="./assets/images/pid-1.jpg" alt="2-DOF PID Control" loading="lazy">
                 </figure>
                 <h3 class="project-title">2-DOF PID Control System</h3>
                 <p class="project-category">Controls</p>
@@ -587,15 +527,10 @@
             </li>
 
             <li class="project-item  active" data-filter-item data-category="research">
-              <a href="#" data-project-trigger
-                 data-title="Lattice Structure Design &amp; Tensile Characterization of PMMA"
-                 data-subtitle="Lab Class Project · Spring 2026"
-                 data-desc="Designed two custom microlattice PMMA specimens at 70% effective void fraction and performed tensile testing to characterize effective elastic modulus and ultimate tensile strength. Ran FEA simulations in Autodesk Fusion 360 to predict stress concentrations — fracture locations confirmed the predicted high-stress regions in both designs. Applied digital image correlation to experimentally measure strain fields during loading and compared results against analytical and FEA predictions.">
+              <a href="#" data-project-open="pmma">
                 <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-                  <img src="./assets/images/project-6.png" alt="PMMA Tensile Testing" loading="lazy">
+                  <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
+                  <img src="./assets/images/pmma-1.jpg" alt="PMMA Tensile Testing" loading="lazy">
                 </figure>
                 <h3 class="project-title">PMMA Microlattice Tensile Testing</h3>
                 <p class="project-category">Research</p>
@@ -606,41 +541,135 @@
 
         </section>
 
+
         <!--
-          - project detail modal
+          - PORTFOLIO DETAIL (project sub-page, hidden until a project is opened)
         -->
 
-        <div class="modal-container" data-project-modal-container>
+        <section class="project-detail" data-portfolio-detail>
 
-          <div class="overlay" data-project-overlay></div>
+          <button class="project-back-btn" data-portfolio-back>
+            <ion-icon name="arrow-back-outline"></ion-icon>
+            <span>Back to all projects</span>
+          </button>
 
-          <section class="project-modal">
+          <ul class="project-subnav">
+            <li><button data-project-link="rfid">RFID Mouse System</button></li>
+            <li><button data-project-link="rcplane">RC Plane</button></li>
+            <li><button data-project-link="vawt">Wind Turbine</button></li>
+            <li><button data-project-link="nbe">CNT Sprayer</button></li>
+            <li><button data-project-link="robot">MAE 3 Robot</button></li>
+            <li><button data-project-link="pid">PID Control</button></li>
+            <li><button data-project-link="pmma">PMMA Lattice</button></li>
+          </ul>
 
-            <button class="modal-close-btn" data-project-modal-close>
-              <ion-icon name="close-outline"></ion-icon>
-            </button>
-
-            <figure class="project-modal-img">
-              <img src="./assets/images/proj-rcplane.jpg" alt="project image" data-project-modal-img>
-            </figure>
-
-            <div class="project-modal-content">
-              <p class="project-modal-category" data-project-modal-category>Category</p>
-              <h4 class="h3 project-modal-title" data-project-modal-title>Project title</h4>
-              <p class="project-modal-subtitle" data-project-modal-subtitle>Subtitle</p>
-              <div class="project-modal-text" data-project-modal-text>
-                <p>Description</p>
-              </div>
+          <!-- RFID -->
+          <div class="project-page" data-project-page="rfid">
+            <h3 class="h3 project-page-title">RFID-Based Automated Mouse Cognitive Training System</h3>
+            <p class="project-page-subtitle">Senior Capstone (MAE 156B) · Team 13 · Fall 2025 – Spring 2026</p>
+            <div class="project-gallery">
+              <figure class="gallery-item gallery-wide"><img src="./assets/images/rfid-1.jpg" alt="RFID mouse training system layout" loading="lazy"></figure>
             </div>
+            <div class="project-page-text">
+              <p>Designed an RFID-enabled cognitive self-training system that lets four group-housed mice access an automated training enclosure individually — cutting training timelines from 5–6 months down to 10–15 days. Three RFID reader modules paired with an ESP32 actuate a dual-gate airlock, achieving a 10 cm read range, 100% detection success across all trials, and 400 ms tag-to-gate latency.</p>
+            </div>
+            <div class="project-link-box">
+              <p>This was a full team capstone with its own dedicated website, including the complete report, design details, and results.</p>
+              <a class="project-page-link" href="https://sites.google.com/eng.ucsd.edu/mae156b-2026spring-team13/home?authuser=1" target="_blank" rel="noopener noreferrer">
+                <ion-icon name="open-outline"></ion-icon>
+                <span>View the full project website</span>
+              </a>
+            </div>
+          </div>
 
-          </section>
+          <!-- RC PLANE -->
+          <div class="project-page" data-project-page="rcplane">
+            <h3 class="h3 project-page-title">RC Plane Structures Sub-Lead</h3>
+            <p class="project-page-subtitle">ASME Student Design Project · Fall 2025 – Spring 2026</p>
+            <div class="project-gallery">
+              <figure class="gallery-item gallery-wide"><img src="./assets/images/rcplane-1.jpg" alt="RC plane CAD render" loading="lazy"></figure>
+              <figure class="gallery-item"><img src="./assets/images/rcplane-2.jpg" alt="RC plane fuselage render" loading="lazy"></figure>
+              <figure class="gallery-item"><img src="./assets/images/rcplane-3.jpg" alt="RC plane full assembly views" loading="lazy"></figure>
+              <figure class="gallery-item"><img src="./assets/images/rcplane-4.jpg" alt="RC plane nose and motor mount detail" loading="lazy"></figure>
+              <figure class="gallery-item"><img src="./assets/images/rcplane-5.jpg" alt="ASME Industry Showcase team photo" loading="lazy"></figure>
+            </div>
+            <div class="project-page-text">
+              <p>Led structural design of a fixed-wing RC aircraft in Autodesk Fusion, designing structures around the flight controller, battery, and onboard particle sensor. Redesigned components to cut weight by roughly 15% while maintaining structural reliability, and collaborated across structural, avionics, and software subteams to prototype and iterate. Completed flight testing and presented final design decisions to industry professionals and faculty at the ASME UCSD Industry Showcase.</p>
+            </div>
+          </div>
 
-        </div>
+          <!-- VAWT -->
+          <div class="project-page" data-project-page="vawt">
+            <h3 class="h3 project-page-title">Vertical Axis Wind Turbine — Project Co-Lead</h3>
+            <p class="project-page-subtitle">Engineers for a Sustainable World, UCSD · Spring 2025 – Spring 2026</p>
+            <div class="project-gallery">
+              <figure class="gallery-item gallery-wide"><img src="./assets/images/vawt-1.jpg" alt="Helical wind turbine CAD render" loading="lazy"></figure>
+              <figure class="gallery-item"><img src="./assets/images/vawt-2.jpg" alt="3D-printed turbine prototype on the bench" loading="lazy"></figure>
+              <figure class="gallery-item"><img src="./assets/images/vawt-3.jpg" alt="Turbine mounted on the ESW demo box" loading="lazy"></figure>
+              <figure class="gallery-item"><img src="./assets/images/vawt-4.jpg" alt="Turbine gearing and bearing assembly" loading="lazy"></figure>
+            </div>
+            <div class="project-page-text">
+              <p>Co-led design of a compact vertical-axis wind turbine prototype demonstrating energy capture in space-constrained environments, integrating actuated blades, a generator belt system, and onboard energy storage for personal device charging. Researched and selected components for real-time monitoring — Hall effect sensor, INA226 power monitor, ESP32, and wind speed/direction sensors. Mentored students from various majors in CAD fundamentals using Autodesk Fusion, building the team's design capability from the ground up.</p>
+            </div>
+          </div>
+
+          <!-- NBE / CNT SPRAYER -->
+          <div class="project-page" data-project-page="nbe">
+            <h3 class="h3 project-page-title">Automated CNT Sprayer for Electrode Coating</h3>
+            <p class="project-page-subtitle">NanoBioElectronics (NBE) Lab, UC San Diego · 2024 – Present</p>
+            <div class="project-gallery">
+              <figure class="gallery-item gallery-wide"><img src="./assets/images/nbe-1.jpg" alt="Labeled CNT sprayer assembly diagram" loading="lazy"></figure>
+              <figure class="gallery-item"><img src="./assets/images/nbe-2.jpg" alt="Laser-aligned spray onto electrode" loading="lazy"></figure>
+              <figure class="gallery-item"><img src="./assets/images/nbe-3.jpg" alt="Gold interdigitated electrodes" loading="lazy"></figure>
+            </div>
+            <div class="project-page-text">
+              <p>Built an automated spray system for depositing carbon nanotubes onto gold electrodes with high precision and repeatability, integrating a solenoid-actuated spray gun, programmable time relay, laser alignment system, and a custom support frame over a heated plate. This eliminated inconsistencies in manual spraying and improved the reliability of electrochemical characterization. I also developed MATLAB scripts to automate experimental data analysis and fabricated a jaw-motion mimicking device to validate salivary cortisol sensor readings in mouthguard devices.</p>
+            </div>
+          </div>
+
+          <!-- MAE 3 ROBOT -->
+          <div class="project-page" data-project-page="robot">
+            <h3 class="h3 project-page-title">Robot Design — MAE 3</h3>
+            <p class="project-page-subtitle">Class Design Project · Autodesk Fusion 360</p>
+            <div class="project-gallery">
+              <figure class="gallery-item gallery-wide"><img src="./assets/images/robot-1.jpg" alt="MAE 3 robot CAD render" loading="lazy"></figure>
+              <figure class="gallery-item gallery-wide"><img src="./assets/images/robot-2.jpg" alt="MAE 3 competition arena" loading="lazy"></figure>
+            </div>
+            <div class="project-page-text">
+              <p>My first full design-and-build project: a simple, reliable, resilient competition robot, fully designed and assembled in under five weeks in Fusion 360. I focused on structure, balance, and overall functionality, with each component individually designed, fabricated, and tested with close attention to dimensions, fits, and tolerances. Optimized performance for specific competition tasks across multiple design iterations.</p>
+            </div>
+          </div>
+
+          <!-- PID -->
+          <div class="project-page" data-project-page="pid">
+            <h3 class="h3 project-page-title">2-DOF Rectilinear System Modeling &amp; PID Control</h3>
+            <p class="project-page-subtitle">Lab Class Project (MAE 171A) · Spring 2026</p>
+            <div class="project-gallery">
+              <figure class="gallery-item gallery-wide"><img src="./assets/images/pid-1.jpg" alt="PID controller block diagram" loading="lazy"></figure>
+            </div>
+            <div class="project-page-text">
+              <p>Characterized a 2-DOF mass-spring-damper system by extracting dynamic parameters from experimental step responses and deriving a transfer function for simulation and control design. Performed sensitivity analysis under varying input amplitudes and mass configurations to evaluate PID controller robustness and identify performance limits. Processed and averaged multi-run experimental data in MATLAB, generating figures comparing simulated versus measured system responses.</p>
+            </div>
+          </div>
+
+          <!-- PMMA -->
+          <div class="project-page" data-project-page="pmma">
+            <h3 class="h3 project-page-title">Lattice Structure Design &amp; Tensile Characterization of PMMA</h3>
+            <p class="project-page-subtitle">Lab Class Project · Spring 2026</p>
+            <div class="project-gallery">
+              <figure class="gallery-item gallery-wide"><img src="./assets/images/pmma-1.jpg" alt="FEA Von Mises stress plot of PMMA specimen" loading="lazy"></figure>
+            </div>
+            <div class="project-page-text">
+              <p>Designed two custom microlattice PMMA specimens at 70% effective void fraction and performed tensile testing to characterize their effective elastic modulus and ultimate tensile strength. Ran FEA simulations in Autodesk Fusion 360 to predict stress concentrations — and fracture locations confirmed the predicted high-stress regions in both designs. Applied digital image correlation to experimentally measure strain fields during loading and compared the results against analytical and FEA predictions.</p>
+            </div>
+          </div>
+
+        </section>
 
       </article>
 
 
-      <!--
+            <!--
         - #PUBLICATIONS
       -->
 
@@ -658,7 +687,7 @@
               <a href="https://doi.org/10.1021/acssensors.6c00737" target="_blank" rel="noopener noreferrer">
 
                 <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-1.jpg" alt="ACS Sensors 2026" loading="lazy">
+                  <img src="./assets/images/pub.jpg" alt="ACS Sensors 2026 publication" loading="lazy">
                 </figure>
 
                 <div class="blog-content">
@@ -685,22 +714,22 @@
               <a href="#">
 
                 <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-2.jpg" alt="Manuscript in preparation" loading="lazy">
+                  <img src="./assets/images/lab.jpg" alt="Ongoing research at the NBE Lab" loading="lazy">
                 </figure>
 
                 <div class="blog-content">
 
                   <div class="blog-meta">
-                    <p class="blog-category">In Preparation</p>
+                    <p class="blog-category">Ongoing Research</p>
                     <span class="dot"></span>
                     <time datetime="2026-01-01">2026</time>
                   </div>
 
-                  <h3 class="h3 blog-item-title">Additional Manuscripts in Preparation</h3>
+                  <h3 class="h3 blog-item-title">Continuing Research at the NBE Lab</h3>
 
                   <p class="blog-text">
-                    Ongoing research contributions from the NanoBioElectronics Lab at UC San Diego.
-                    Additional manuscripts currently in preparation for submission.
+                    I'm continuing to contribute to the NanoBioElectronics Lab at UC San Diego, supporting
+                    several different research projects that are expected to lead to additional publications.
                   </p>
 
                 </div>
