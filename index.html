@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Victor Perez | Mechanical Engineer</title>
+
+  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <main>
+
+    <!--
+      - #SIDEBAR
+    -->
+
+    <aside class="sidebar" data-sidebar>
+
+      <div class="sidebar-info">
+
+        <figure class="avatar-box">
+          <img src="./assets/images/my-avatar.png" alt="Victor Perez" width="80">
+        </figure>
+
+        <div class="info-content">
+          <h1 class="name" title="Victor Perez">Victor Perez</h1>
+          <p class="title">Mechanical Engineer</p>
+        </div>
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="sidebar-info_more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+              <a href="mailto:victorperezvp371@gmail.com" class="contact-link">victorperezvp371@gmail.com</a>
+            </div>
+          </li>
+
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="phone-portrait-outline"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Phone</p>
+              <a href="tel:+17606978582" class="contact-link">+1 (760) 697-8582</a>
+            </div>
+          </li>
+
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+              <address>San Diego, California, USA</address>
+            </div>
+          </li>
+
+        </ul>
+
+        <div class="separator"></div>
+
+        <ul class="social-list">
+
+          <li class="social-item">
+            <a href="https://www.linkedin.com/in/victor-perez-984135276/" class="social-link" target="_blank" rel="noopener noreferrer">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </aside>
+
+
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content">
+
+      <!--
+        - #NAVBAR
+      -->
+
+      <nav class="navbar">
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <button class="navbar-link  active" data-nav-link>About</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Resume</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Portfolio</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Publications</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Contact</button>
+          </li>
+
+        </ul>
+
+      </nav>
+
+
+      <!--
+        - #ABOUT
+      -->
+
+      <article class="about  active" data-page="about">
+
+        <header>
+          <h2 class="h2 article-title">About me</h2>
+        </header>
+
+        <section class="about-text">
+          <p>
+            I'm a Mechanical Engineering graduate from UC San Diego with hands-on experience in system design, embedded
+            electronics, structural analysis, and experimental testing. I've worked across academic labs and
+            student-led design teams — building everything from RFID-controlled hardware systems to FEA-validated
+            lattice structures and biosensor research tools.
+          </p>
+
+          <p>
+            I'm co-author on a peer-reviewed publication in ACS Sensors (2026) and actively seeking full-time roles
+            in mechanical design, product development, or systems engineering. I bring a practical mindset: I focus on
+            turning requirements into working, testable hardware.
+          </p>
+        </section>
+
+
+        <!--
+          - services
+        -->
+
+        <section class="service">
+
+          <h3 class="h3 service-title">What I'm doing</h3>
+
+          <ul class="service-list">
+
+            <li class="service-item">
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-design.svg" alt="CAD icon" width="40">
+              </div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">CAD &amp; Mechanical Design</h4>
+                <p class="service-item-text">
+                  3D modeling and part design in Autodesk Fusion, Onshape, and AutoCAD — from concept sketches to
+                  fabrication-ready assemblies.
+                </p>
+              </div>
+            </li>
+
+            <li class="service-item">
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-dev.svg" alt="FEA icon" width="40">
+              </div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Structural Analysis &amp; FEA</h4>
+                <p class="service-item-text">
+                  Finite element analysis and simulation using ANSYS and Fusion 360 to predict stress, optimize
+                  geometry, and validate designs before fabrication.
+                </p>
+              </div>
+            </li>
+
+            <li class="service-item">
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-app.svg" alt="embedded systems icon" width="40">
+              </div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Embedded Systems &amp; Electronics</h4>
+                <p class="service-item-text">
+                  Sensor integration, microcontroller programming (Arduino, ESP32), and level-shifting circuit design
+                  for smart, data-collecting hardware.
+                </p>
+              </div>
+            </li>
+
+            <li class="service-item">
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-photo.svg" alt="research icon" width="40">
+              </div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Experimental Testing &amp; Research</h4>
+                <p class="service-item-text">
+                  Hands-on testing, data logging, and MATLAB-based analysis to validate designs, characterize systems,
+                  and generate publishable results.
+                </p>
+              </div>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+      <!--
+        - #RESUME
+      -->
+
+      <article class="resume" data-page="resume">
+
+        <header>
+          <h2 class="h2 article-title">Resume</h2>
+        </header>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+            <h3 class="h3">Education</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">University of California, San Diego</h4>
+              <span>2022 — 2026</span>
+              <p class="timeline-text">
+                Bachelor of Science in Mechanical Engineering. Coursework in dynamics, controls, FEA,
+                thermodynamics, fluid mechanics, and mechatronics. Active in ASME and Engineers for a
+                Sustainable World (ESW).
+              </p>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Imperial Valley College</h4>
+              <span>2021 — 2023</span>
+              <p class="timeline-text">
+                Associate of Science in Mathematics &amp; Physics. Completed lower-division transfer preparation
+                with a focus on calculus, linear algebra, differential equations, and physics.
+              </p>
+            </li>
+
+          </ol>
+
+        </section>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+            <h3 class="h3">Experience &amp; Projects</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">RFID-Based Automated Mouse Cognitive Training System</h4>
+              <span>Fall 2025 — Spring 2026 &middot; Senior Capstone Project</span>
+              <p class="timeline-text">
+                Designed an RFID-enabled cognitive self-training system for 4 group-housed mice, cutting training
+                timelines from 5–6 months to 10–15 days. Integrated three RFID reader modules with an ESP32
+                microcontroller to actuate a dual-gate airlock, achieving 100% detection success and 400 ms
+                end-to-end latency across all trials.
+              </p>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">RC Plane Structures Sub-Lead — ASME Student Design Project</h4>
+              <span>Fall 2025 — Spring 2026</span>
+              <p class="timeline-text">
+                Led structural design of a fixed-wing RC aircraft in Autodesk Fusion, redesigning components to
+                reduce weight by ~15% while maintaining structural reliability. Presented final results at the ASME
+                UCSD Industry Showcase after completing flight testing.
+              </p>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Vertical Axis Wind Turbine Project Co-Lead — ESW UCSD</h4>
+              <span>Spring 2025 — Spring 2026</span>
+              <p class="timeline-text">
+                Co-led design of a compact VAWT prototype integrating actuated blades, a generator belt system,
+                and onboard energy storage. Selected electrical components for real-time monitoring including Hall
+                effect sensors, INA226 power monitor, and wind sensors. Mentored team members in Autodesk Fusion.
+              </p>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Volunteer Research — NanoBioElectronics Lab, UC San Diego</h4>
+              <span>2024 — Present</span>
+              <p class="timeline-text">
+                Automated experimental data analysis via MATLAB scripts. Designed and fabricated a jaw-motion
+                mimicking device to validate salivary cortisol sensor readings in mouthguard devices. Built an
+                automated carbon nanotube electrode-coating system. Co-authored a peer-reviewed ACS Sensors
+                publication (2026).
+              </p>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">2-DOF Rectilinear System Modeling &amp; PID Control</h4>
+              <span>Spring 2026 &middot; Lab Class Project</span>
+              <p class="timeline-text">
+                Characterized a 2-DOF mass-spring-damper system from experimental step responses, derived a
+                transfer function, and designed a PID controller. Performed sensitivity analysis under varying
+                mass configurations and compared simulated vs. measured responses in MATLAB.
+              </p>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Lattice Structure Design &amp; Tensile Characterization of PMMA</h4>
+              <span>Spring 2026 &middot; Lab Class Project</span>
+              <p class="timeline-text">
+                Designed two custom microlattice PMMA specimens at 70% void fraction and performed tensile testing
+                to measure elastic modulus and ultimate tensile strength. Validated designs against FEA predictions
+                in Autodesk Fusion 360 and applied digital image correlation to measure strain fields during loading.
+              </p>
+            </li>
+
+          </ol>
+
+        </section>
+
+        <section class="skill">
+
+          <h3 class="h3 skills-title">My skills</h3>
+
+          <ul class="skills-list content-card">
+
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">Autodesk Fusion 360</h5>
+                <data value="90">90%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 90%;"></div>
+              </div>
+            </li>
+
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">MATLAB</h5>
+                <data value="85">85%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 85%;"></div>
+              </div>
+            </li>
+
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">Arduino / ESP32</h5>
+                <data value="85">85%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 85%;"></div>
+              </div>
+            </li>
+
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">ANSYS / FEA</h5>
+                <data value="75">75%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 75%;"></div>
+              </div>
+            </li>
+
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">3D Printing &amp; CNC Machining</h5>
+                <data value="80">80%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 80%;"></div>
+              </div>
+            </li>
+
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">Onshape / AutoCAD</h5>
+                <data value="75">75%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 75%;"></div>
+              </div>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+      <!--
+        - #PORTFOLIO
+      -->
+
+      <article class="portfolio" data-page="portfolio">
+
+        <header>
+          <h2 class="h2 article-title">Portfolio</h2>
+        </header>
+
+        <section class="projects">
+
+          <ul class="filter-list">
+
+            <li class="filter-item">
+              <button class="active" data-filter-btn>All</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>CAD Design</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Research</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Controls</button>
+            </li>
+
+          </ul>
+
+          <div class="filter-select-box">
+
+            <button class="filter-select" data-select>
+              <div class="select-value" data-selecct-value>Select category</div>
+              <div class="select-icon">
+                <ion-icon name="chevron-down"></ion-icon>
+              </div>
+            </button>
+
+            <ul class="select-list">
+
+              <li class="select-item">
+                <button data-select-item>All</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>CAD Design</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Research</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Controls</button>
+              </li>
+
+            </ul>
+
+          </div>
+
+          <ul class="project-list">
+
+            <li class="project-item  active" data-filter-item data-category="controls">
+              <a href="#">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/project-1.jpg" alt="RFID Mouse Training System" loading="lazy">
+                </figure>
+                <h3 class="project-title">RFID Mouse Training System</h3>
+                <p class="project-category">Controls</p>
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="cad design">
+              <a href="#">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/project-2.png" alt="RC Plane Structures" loading="lazy">
+                </figure>
+                <h3 class="project-title">RC Plane Structures</h3>
+                <p class="project-category">CAD Design</p>
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="cad design">
+              <a href="#">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/project-3.jpg" alt="Vertical Axis Wind Turbine" loading="lazy">
+                </figure>
+                <h3 class="project-title">Vertical Axis Wind Turbine</h3>
+                <p class="project-category">CAD Design</p>
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="research">
+              <a href="#">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/project-4.png" alt="NBE Lab Research" loading="lazy">
+                </figure>
+                <h3 class="project-title">NBE Lab — Cortisol Biosensor</h3>
+                <p class="project-category">Research</p>
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="controls">
+              <a href="#">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/project-5.png" alt="PID Control Lab" loading="lazy">
+                </figure>
+                <h3 class="project-title">2-DOF PID Control System</h3>
+                <p class="project-category">Controls</p>
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="research">
+              <a href="#">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/project-6.png" alt="PMMA Tensile Testing" loading="lazy">
+                </figure>
+                <h3 class="project-title">PMMA Microlattice Tensile Testing</h3>
+                <p class="project-category">Research</p>
+              </a>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+      <!--
+        - #PUBLICATIONS
+      -->
+
+      <article class="blog" data-page="publications">
+
+        <header>
+          <h2 class="h2 article-title">Publications</h2>
+        </header>
+
+        <section class="blog-posts">
+
+          <ul class="blog-posts-list">
+
+            <li class="blog-post-item">
+              <a href="https://doi.org/10.1021/acssensors.6c00737" target="_blank" rel="noopener noreferrer">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-1.jpg" alt="ACS Sensors 2026" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">ACS Sensors</p>
+                    <span class="dot"></span>
+                    <time datetime="2026-04-01">April 2026</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Self-Correction of pH-Induced Signal Variations in Methylene Blue-Labeled Aptamer Electrochemical Biosensors: Wearable Cortisol Detection in Sweat</h3>
+
+                  <p class="blog-text">
+                    Sabbagh B., Khan M.I., Kim G., Nandhakumar P., Chiu L., Zheng H., Jakasania A.,
+                    <strong>Perez V.</strong>, Saha T., Park M., &amp; Wang J. — ACS Sensors, 11(4), 3505–3515.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-2.jpg" alt="Manuscript in preparation" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">In Preparation</p>
+                    <span class="dot"></span>
+                    <time datetime="2026-01-01">2026</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Additional Manuscripts in Preparation</h3>
+
+                  <p class="blog-text">
+                    Ongoing research contributions from the NanoBioElectronics Lab at UC San Diego.
+                    Additional manuscripts currently in preparation for submission.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+      <!--
+        - #CONTACT
+      -->
+
+      <article class="contact" data-page="contact">
+
+        <header>
+          <h2 class="h2 article-title">Contact</h2>
+        </header>
+
+        <section class="mapbox" data-mapbox>
+          <figure>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d107234.57145805625!2d-117.23009974647693!3d32.71573520849952!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80d9530fad921e4b%3A0xd3a21fdfd15df79!2sSan%20Diego%2C%20CA%2C%20USA!5e0!3m2!1sen!2sus!4v1647608789441!5m2!1sen!2sus"
+              width="400" height="300" loading="lazy"></iframe>
+          </figure>
+        </section>
+
+        <section class="contact-form">
+
+          <h3 class="h3 form-title">Contact Form</h3>
+
+          <form action="#" class="form" data-form>
+
+            <div class="input-wrapper">
+              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+            </div>
+
+            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+
+            <button class="form-btn" type="submit" disabled data-form-btn>
+              <ion-icon name="paper-plane"></ion-icon>
+              <span>Send Message</span>
+            </button>
+
+          </form>
+
+        </section>
+
+      </article>
+
+    </div>
+
+  </main>
+
+
+  <script src="./assets/js/script.js"></script>
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
