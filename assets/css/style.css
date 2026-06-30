@@ -2465,7 +2465,8 @@ body {
 }
 
 .about-photo {
-  flex: 0 0 248px;
+  flex: 0 0 230px;
+  align-self: flex-start;
   border: 4px solid transparent;
   border-radius: 18px;
   background:
@@ -2477,9 +2478,10 @@ body {
 
 .about-photo img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
   display: block;
+  object-fit: cover;
+  object-position: center;
 }
 
 @media (max-width: 768px) {
