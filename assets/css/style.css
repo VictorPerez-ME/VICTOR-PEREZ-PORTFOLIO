@@ -2290,3 +2290,245 @@ textarea.form-input::-webkit-resizer { display: none; }
   .project-metrics { grid-template-columns: 1fr 1fr; }
   .project-video-grid { grid-template-columns: 1fr; }
 }
+
+
+
+/*-----------------------------------*\
+  #THEME OVERRIDE — PURPLE / VIOLET GRADIENT
+\*-----------------------------------*/
+
+:root {
+  --smoky-black: hsl(258, 45%, 6%);
+  --eerie-black-1: hsl(257, 30%, 13%);
+  --eerie-black-2: hsl(258, 33%, 11%);
+  --onyx: hsl(258, 24%, 19%);
+  --jet: hsl(262, 28%, 28%);
+  --orange-yellow-crayola: hsl(266, 92%, 72%);
+  --vegas-gold: hsl(270, 70%, 66%);
+  --light-gray: hsl(256, 22%, 92%);
+  --light-gray-70: hsla(256, 22%, 92%, 0.72);
+  --white-2: hsl(0, 0%, 100%);
+
+  --text-gradient-yellow: linear-gradient(to right, hsl(266, 95%, 78%), hsl(296, 90%, 70%));
+  --bg-gradient-onyx: linear-gradient(to bottom right, hsl(260, 26%, 22%) 3%, hsl(258, 30%, 14%) 97%);
+  --bg-gradient-jet: linear-gradient(to bottom right, hsla(262, 32%, 32%, 0.30) 0%, hsla(258, 30%, 12%, 0) 100%), hsl(258, 32%, 12%);
+  --bg-gradient-yellow-1: linear-gradient(to bottom right, hsl(266, 90%, 70%) 0%, hsla(296, 90%, 66%, 0) 50%);
+  --bg-gradient-yellow-2: linear-gradient(135deg, hsla(266, 90%, 70%, 0.25) 0%, hsla(296, 90%, 66%, 0) 59.86%), hsl(258, 32%, 12%);
+  --border-gradient-onyx: linear-gradient(to bottom right, hsl(266, 45%, 45%) 0%, hsla(266, 45%, 45%, 0) 50%);
+}
+
+body {
+  background:
+    radial-gradient(1200px 600px at 80% -10%, hsla(286, 70%, 30%, 0.45), transparent 60%),
+    radial-gradient(900px 500px at -10% 20%, hsla(255, 75%, 35%, 0.40), transparent 55%),
+    linear-gradient(135deg, hsl(258, 48%, 8%) 0%, hsl(270, 52%, 5%) 55%, hsl(250, 45%, 7%) 100%);
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+/* harmonized project accent colors */
+.project-page { --accent: hsl(266, 92%, 74%); --accent-soft: hsla(266, 92%, 74%, 0.16); }
+.project-page.cat-cad { --accent: hsl(210, 95%, 66%); --accent-soft: hsla(210, 95%, 66%, 0.16); }
+.project-page.cat-research { --accent: hsl(165, 80%, 56%); --accent-soft: hsla(165, 80%, 56%, 0.16); }
+.project-page.cat-controls { --accent: hsl(315, 88%, 70%); --accent-soft: hsla(315, 88%, 70%, 0.16); }
+
+
+/*-----------------------------------*\
+  #IMAGE FRAMES — GRADIENT BEZEL, CONSISTENT SIZE
+\*-----------------------------------*/
+
+.project-gallery { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+
+.gallery-item {
+  border: 4px solid transparent;
+  border-radius: 18px;
+  background:
+    linear-gradient(var(--eerie-black-2), var(--eerie-black-2)) padding-box,
+    linear-gradient(135deg, hsl(266, 92%, 68%) 0%, hsl(296, 88%, 60%) 50%, hsl(222, 90%, 64%) 100%) border-box;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: unset;
+  box-shadow: 0 10px 30px hsla(266, 60%, 6%, 0.55);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 250px;
+  object-fit: contain;
+  background: hsl(258, 36%, 9%);
+  display: block;
+  padding: 6px;
+}
+
+.gallery-wide img { height: 380px; }
+
+.gallery-item figcaption {
+  width: 100%;
+  background: var(--eerie-black-1);
+  color: var(--light-gray-70);
+  border-top: 1px solid var(--jet);
+  padding: 10px 12px;
+  font-size: var(--fs-8);
+  text-align: center;
+}
+
+
+/*-----------------------------------*\
+  #VIDEO — CONFINED WINDOWS
+\*-----------------------------------*/
+
+.project-video-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: flex-start;
+}
+
+.project-video {
+  flex: 0 1 300px;
+  max-width: 320px;
+  aspect-ratio: 4 / 3;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border: 4px solid transparent;
+  border-radius: 16px;
+  background:
+    linear-gradient(#000, #000) padding-box,
+    linear-gradient(135deg, hsl(266, 92%, 68%), hsl(296, 88%, 60%)) border-box;
+  box-shadow: 0 10px 30px hsla(266, 60%, 6%, 0.55);
+}
+
+
+/*-----------------------------------*\
+  #REPORT VIEWER — VIEW ONLY, SCROLLABLE
+\*-----------------------------------*/
+
+.report-hint {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: var(--fs-8);
+  color: var(--light-gray-70);
+  margin-bottom: 10px;
+}
+.report-hint ion-icon { color: var(--accent); font-size: 15px; }
+
+.report-viewer {
+  max-height: 620px;
+  overflow-y: auto;
+  border: 4px solid transparent;
+  border-radius: 16px;
+  background:
+    linear-gradient(var(--eerie-black-1), var(--eerie-black-1)) padding-box,
+    linear-gradient(135deg, hsl(266, 92%, 68%), hsl(296, 88%, 60%), hsl(222, 90%, 64%)) border-box;
+  padding: 12px;
+  -webkit-user-select: none;
+  user-select: none;
+  scrollbar-width: thin;
+}
+.report-viewer::-webkit-scrollbar { width: 8px; }
+.report-viewer::-webkit-scrollbar-thumb { background: var(--jet); border-radius: 8px; }
+.report-viewer img {
+  width: 100%;
+  display: block;
+  margin: 0 auto 10px;
+  border-radius: 6px;
+  box-shadow: 0 4px 14px hsla(0,0%,0%,0.4);
+  pointer-events: none;
+}
+
+@media (max-width: 580px) {
+  .project-video { flex: 1 1 100%; max-width: 100%; }
+}
+
+
+
+/*-----------------------------------*\
+  #ABOUT — TEXT + PHOTO
+\*-----------------------------------*/
+
+.about-text-wrap {
+  display: flex;
+  gap: 26px;
+  align-items: flex-start;
+}
+
+.about-text { flex: 1 1 auto; }
+
+.about-text p {
+  color: var(--light-gray);
+  font-size: var(--fs-6);
+  line-height: 1.75;
+  margin-bottom: 14px;
+}
+
+.about-photo {
+  flex: 0 0 248px;
+  border: 4px solid transparent;
+  border-radius: 18px;
+  background:
+    linear-gradient(var(--eerie-black-2), var(--eerie-black-2)) padding-box,
+    linear-gradient(135deg, hsl(266, 92%, 68%) 0%, hsl(296, 88%, 60%) 50%, hsl(222, 90%, 64%) 100%) border-box;
+  overflow: hidden;
+  box-shadow: 0 12px 32px hsla(266, 60%, 6%, 0.55);
+}
+
+.about-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .about-text-wrap { flex-direction: column; }
+  .about-photo { flex: 0 0 auto; width: 100%; max-width: 320px; align-self: center; }
+}
+
+
+
+/*-----------------------------------*\
+  #SKILLS — CATEGORIZED LIST
+\*-----------------------------------*/
+
+.skills-group-list { display: grid; gap: 18px; }
+
+.skills-group-title {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--white-2);
+  font-size: var(--fs-5);
+  font-weight: var(--fw-500);
+  margin-bottom: 11px;
+}
+
+.skills-group-title::before {
+  content: "";
+  width: 20px; height: 3px;
+  border-radius: 3px;
+  background: var(--text-gradient-yellow);
+}
+
+.skills-tags { display: flex; flex-wrap: wrap; gap: 9px; }
+
+.skills-tags li {
+  font-size: var(--fs-7);
+  color: var(--light-gray);
+  background:
+    linear-gradient(var(--eerie-black-1), var(--eerie-black-1)) padding-box,
+    linear-gradient(135deg, hsla(266,80%,60%,0.6), hsla(296,80%,55%,0.5)) border-box;
+  border: 1.5px solid transparent;
+  border-radius: 50px;
+  padding: 7px 16px;
+  transition: var(--transition-1);
+}
+
+.skills-tags li:hover {
+  color: var(--white-2);
+  background:
+    linear-gradient(hsl(266,40%,18%), hsl(266,40%,18%)) padding-box,
+    linear-gradient(135deg, hsl(266,90%,68%), hsl(296,85%,60%)) border-box;
+}
