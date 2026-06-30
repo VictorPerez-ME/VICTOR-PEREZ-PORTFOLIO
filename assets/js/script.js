@@ -136,6 +136,40 @@ for (let i = 0; i < formInputs.length; i++) {
 
 
 
+// project detail modal
+const projectTriggers = document.querySelectorAll("[data-project-trigger]");
+const projectModalContainer = document.querySelector("[data-project-modal-container]");
+const projectModalCloseBtn = document.querySelector("[data-project-modal-close]");
+const projectOverlay = document.querySelector("[data-project-overlay]");
+const projectModalImg = document.querySelector("[data-project-modal-img]");
+const projectModalTitle = document.querySelector("[data-project-modal-title]");
+const projectModalSubtitle = document.querySelector("[data-project-modal-subtitle]");
+const projectModalCategory = document.querySelector("[data-project-modal-category]");
+const projectModalText = document.querySelector("[data-project-modal-text]");
+
+const projectModalFunc = function () {
+  if (projectModalContainer) projectModalContainer.classList.toggle("active");
+};
+
+for (let i = 0; i < projectTriggers.length; i++) {
+  projectTriggers[i].addEventListener("click", function (e) {
+    e.preventDefault();
+    const cardImg = this.querySelector("img");
+    projectModalImg.src = cardImg.src;
+    projectModalImg.alt = cardImg.alt;
+    projectModalCategory.innerHTML = this.querySelector(".project-category").innerHTML;
+    projectModalTitle.innerHTML = this.dataset.title;
+    projectModalSubtitle.innerHTML = this.dataset.subtitle;
+    projectModalText.innerHTML = "<p>" + this.dataset.desc + "</p>";
+    projectModalFunc();
+  });
+}
+
+if (projectModalCloseBtn) projectModalCloseBtn.addEventListener("click", projectModalFunc);
+if (projectOverlay) projectOverlay.addEventListener("click", projectModalFunc);
+
+
+
 // page navigation variables
 const navigationLinks = document.querySelectorAll("[data-nav-link]");
 const pages = document.querySelectorAll("[data-page]");
