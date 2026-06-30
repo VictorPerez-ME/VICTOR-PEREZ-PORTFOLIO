@@ -2532,3 +2532,13 @@ body {
     linear-gradient(hsl(266,40%,18%), hsl(266,40%,18%)) padding-box,
     linear-gradient(135deg, hsl(266,90%,68%), hsl(296,85%,60%)) border-box;
 }
+
+
+
+/*-----------------------------------*\
+  #FIX — PROJECT TITLE COLOR (was defaulting to black)
+\*-----------------------------------*/
+
+.project-page-title {
+  color: var(--white-2);
+}
