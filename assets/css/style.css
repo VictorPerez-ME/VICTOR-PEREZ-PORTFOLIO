@@ -2544,3 +2544,18 @@ body {
 .project-page-title {
   color: var(--white-2);
 }
+
+
+
+/*-----------------------------------*\
+  #CONTACT FORM STATUS
+\*-----------------------------------*/
+
+.form-status {
+  font-size: var(--fs-6);
+  margin-top: 4px;
+  min-height: 1em;
+}
+.form-status.sending { color: var(--light-gray-70); }
+.form-status.success { color: hsl(160, 70%, 62%); }
+.form-status.error   { color: hsl(355, 80%, 70%); }

@@ -134,6 +134,44 @@ for (let i = 0; i < formInputs.length; i++) {
   });
 }
 
+// submit the contact form via Web3Forms (no page reload, shows status)
+const formStatus = document.querySelector("[data-form-status]");
+
+if (form) {
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const setStatus = function (msg, state) {
+      if (!formStatus) return;
+      formStatus.textContent = msg;
+      formStatus.className = "form-status " + state;
+    };
+
+    setStatus("Sending…", "sending");
+    formBtn.setAttribute("disabled", "");
+
+    fetch(form.action, {
+      method: "POST",
+      body: new FormData(form),
+      headers: { Accept: "application/json" }
+    })
+      .then(async function (res) {
+        const data = await res.json().catch(function () { return {}; });
+        if (res.ok && data.success) {
+          setStatus("Thanks! Your message has been sent — I'll get back to you soon.", "success");
+          form.reset();
+        } else {
+          setStatus((data && data.message) || "Something went wrong. Please email me directly at victorperezvp371@gmail.com.", "error");
+          formBtn.removeAttribute("disabled");
+        }
+      })
+      .catch(function () {
+        setStatus("Network error. Please email me directly at victorperezvp371@gmail.com.", "error");
+        formBtn.removeAttribute("disabled");
+      });
+  });
+}
+
 
 
 // project detail sub-page navigation
