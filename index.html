@@ -16,6 +16,43 @@
 
 <body>
 
+  <!-- INTRO ANIMATION -->
+  <div class="intro" data-intro>
+
+    <div class="intro-panel intro-panel--top"></div>
+    <div class="intro-panel intro-panel--bottom"></div>
+
+    <div class="intro-grid"></div>
+    <div class="intro-orb intro-orb--1"></div>
+    <div class="intro-orb intro-orb--2"></div>
+    <div class="intro-orb intro-orb--3"></div>
+
+    <div class="intro-center">
+      <svg class="intro-name" viewBox="0 0 640 90" aria-hidden="true">
+        <defs>
+          <linearGradient id="introGrad" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="hsl(266, 92%, 68%)" />
+            <stop offset="0.5" stop-color="hsl(296, 88%, 60%)" />
+            <stop offset="1" stop-color="hsl(222, 90%, 64%)" />
+          </linearGradient>
+        </defs>
+        <text x="320" y="66" text-anchor="middle">VICTOR PEREZ</text>
+      </svg>
+      <p class="intro-subtitle">Mechanical Engineer</p>
+      <div class="intro-bar"></div>
+    </div>
+
+    <button class="intro-skip" type="button">Skip</button>
+
+  </div>
+  <script>
+    // remove intro before first paint on repeat visits / reduced motion — no flash
+    if (sessionStorage.getItem("introPlayed") ||
+        window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      document.currentScript.previousElementSibling.remove();
+    }
+  </script>
+
   <main>
 
     <!--

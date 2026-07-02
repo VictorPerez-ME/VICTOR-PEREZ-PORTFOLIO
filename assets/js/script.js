@@ -249,3 +249,42 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   });
 }
+
+
+
+/* INTRO ANIMATION */
+(function () {
+
+  const intro = document.querySelector("[data-intro]");
+  if (!intro) return; // already removed by the inline pre-paint check
+
+  sessionStorage.setItem("introPlayed", "1");
+  document.body.style.overflow = "hidden";
+
+  let finished = false;
+
+  const removeIntro = function () {
+    document.body.style.overflow = "";
+    if (intro.parentNode) intro.remove();
+  };
+
+  const finish = function () {
+    if (finished) return;
+    finished = true;
+    clearTimeout(autoExit);
+    document.body.style.overflow = "";
+    intro.classList.add("intro-exit");
+    intro.querySelector(".intro-panel--top").addEventListener("transitionend", removeIntro);
+  };
+
+  // auto-exit once the sequence completes (~2.0s + 0.6s panel split = 2.6s total)
+  const autoExit = setTimeout(finish, 2000);
+
+  // any click or keypress skips
+  intro.addEventListener("click", finish);
+  window.addEventListener("keydown", finish, { once: true });
+
+  // safety net — the site can never stay hidden
+  setTimeout(removeIntro, 3500);
+
+})();
