@@ -16,8 +16,8 @@
 
 <body>
 
-  <!-- INTRO ANIMATION -->
-  <div class="intro" data-intro>
+  <!-- INTRO ANIMATION — critical positioning inline so a stale cached CSS can never drop the overlay into the page flow -->
+  <div class="intro" data-intro style="position: fixed; inset: 0; z-index: 100;">
 
     <div class="intro-panel intro-panel--top"></div>
     <div class="intro-panel intro-panel--bottom"></div>
@@ -46,9 +46,8 @@
 
   </div>
   <script>
-    // remove intro before first paint on repeat visits / reduced motion — no flash
-    if (sessionStorage.getItem("introPlayed") ||
-        window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    // remove intro before first paint when reduced motion is preferred
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
       document.currentScript.previousElementSibling.remove();
     }
   </script>

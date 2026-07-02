@@ -258,7 +258,6 @@ for (let i = 0; i < navigationLinks.length; i++) {
   const intro = document.querySelector("[data-intro]");
   if (!intro) return; // already removed by the inline pre-paint check
 
-  sessionStorage.setItem("introPlayed", "1");
   document.body.style.overflow = "hidden";
 
   let finished = false;
