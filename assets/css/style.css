@@ -2363,6 +2363,16 @@ body {
 
 .gallery-wide img { height: 380px; }
 
+/* month subheadings inside progress galleries */
+.gallery-month {
+  color: var(--orange-yellow-crayola);
+  font-size: var(--fs-7);
+  font-weight: var(--fw-500);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin: 18px 0 12px;
+}
+
 .gallery-item figcaption {
   width: 100%;
   background: var(--eerie-black-1);
